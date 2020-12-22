@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;700&display=swap');
+
+html{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  color: var(--on-background);
+  background-color: var(--background);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23e883bd' fill-opacity='1'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Variables for Dark and Light Mode  */
+:root{
+  --primary-color: #BB02EE;
+  --primary-variant: #6400DC;
+  --secondary-color: #CE93D8; 
+  --on-primary: white;
+  --on-secondary: black;
+  --on-background: white;
+  --on-background-alt: white;
+  --background: #f256ff; 
+  --box-shadow: #880e4f;
+}
+
+[data-theme="dark"]{
+  --primary-color:  #BB02EE; 
+  --primary-variant: #4a148c;
+  --secondary-color: #bd0055; 
+  --on-primary: white;
+  --on-seconday: black;
+  --on-background: white;
+  --on-background-alt: white;
+  --background: #8500ba;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1{
+  font-size: 100px;
+  margin-bottom: 0px;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 2px;
+  color: var(--on-background);
+}
+
+h2{
+  font-size: 42px;
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 2px;
+  color: var(--on-background);
+}
+
+ /* Styles for navigation */
+ .navigation{
+   z-index: 10;
+   position: fixed;
+   font-size: 24px;
+   letter-spacing: 3px;
+   padding: 25px;
+   width: 100vw;
+   background: var(--background);
+ }
+
+ .navigation_list{
+   list-style-type: none;
+   display: flex;
+   justify-content: space-around;
+ }
+
+ .navigation_list__elem a{
+   text-decoration: none;
+   color: var(--on-primary);
+ }
+
+ .navigation_list__elem a:hover{
+  color: var(--on-background);
+  border-bottom: 3px solid;
+}
+
+
+/* About Section */
+.about_text{
+  margin: 4rem 6rem;
+}
+
+
+.about_buttons{
+  margin-top: 4rem; 
+}
+
+.about_buttons button{
+  font-size: 24pt;
+  border-radius: 14px;
+  padding: 1rem 1rem;
+  border: none;
+  margin: 0 0.4rem;
+  width: 12rem;
+}
+
+.about_buttons button:hover{
+  transform: scale(1.1, 1.1);
+}
+
+
+.button_hey{
+  background-color: #6400DC;
+}
+
+
+.button_stranger{
+  background-color: #bd0055;
+}
+
+.button_enjoying{
+  background-color: aliceblue;
+}
+
+.button_your{
+  background-color: beige;
+}
+
+.button_time{
+  background-color: #4a148c;
+}
+
+/* Content Section */
+.content_projects{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.content_projects__elem{
+  background-color: #dd00ef;;
+  text-align: center;
+  border-radius: 14px;
+  width: 50%;
+  margin: 0 2rem;
+}
+
+.content_projects__elem:hover{
+  transform: scale(1.2, 1.2);
+}
+
+
+.content_projects__elem img{
+  width: 45%;
+}
+
+/* Contacts */
+
+.contacts_icons__elem{
+  text-align: center;
+  font-size: 100px;
+  margin-right: 50px;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.fab:hover {
+  color: var(--on-background);
+}
+
+
+/* Dark Mode Toggle */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  position: fixed;
+  right: 25px;
+  top: 100px;
+}
+
+.theme-switch-wrapper span {
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.toggle-text {
+  position: relative;
+  top: -4px;
+  right: 5px;
+  color: var(--on-background);
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider::before {
+  background: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background: var(--primary-color);
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}
+
+.fas {
+  font-size: 30px;
+  margin-right: 5px;
+}
+
